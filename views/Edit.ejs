@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit-Route</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="form-container">
+
+        <h1>Edit Your User</h1>
+
+        <h2>User ID: <%= data.userId %></h2>
+        <h3>Username: <%= data.username %></h3>
+        <h3>Email: <%= data.email %></h3>
+
+        <form method="POST"
+              action="/show/<%= data.userId %>?_method=PATCH">
+
+            <textarea
+                name="newusername"
+                placeholder="Edit Username"
+                rows="4"><%= data.username %></textarea>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter Your Password">
+
+            <button type="submit">
+                Update
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+
+<!--    edit -> submit -> Patch ->     <form method="POST" action="/show/ data.userId ?_method=PATCH"></form> -->

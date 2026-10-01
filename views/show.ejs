@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show-All-User</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+     <h1>List of All-Users</h1>
+       <div class="table-container">
+     <table>
+         <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Edit</th>
+        <th>Information</th>
+        <th>Delete</th>
+    </tr>
+    <% for(user of data){ %>    
+        <tr>
+            <td><%= user.userId %></td>
+            <td><%= user.username %></td>
+            <td>  <%= user.email %> </td>
+            <td><%= user.password %></td>
+             <td>  
+                <form method="get" action="http://localhost:8080/show/<%=user.userId %>/edit">
+                    <button>Edit</button>
+                </form>
+             </td>
+              <td>  
+              <a href="/show/<%= user.userId %>">See-InDetail</a>
+             </td>
+              <td>  
+                <form method="POST" action="/show/<%= user.userId %>?_method=DELETE">
+                    <button>Delete</button>
+                </form>
+             </td>
+             </tr>
+            <% } %>
+     </table>
+     </div>
+      <a class="create-link" href="/show/new">
+        Create a New User
+    </a>
+</body>
+</html>
+
+

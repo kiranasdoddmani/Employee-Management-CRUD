@@ -1,0 +1,250 @@
+
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   Headings
+========================= */
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: #222;
+}
+
+h2 {
+    margin: 15px 0;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+
+/* =========================
+   Container
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* =========================
+   Home Page
+========================= */
+
+.home-card {
+    width: 500px;
+    max-width: 90%;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.home-card h1 {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Forms
+========================= */
+
+.form-container {
+    width: 450px;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+/* =========================
+   Table
+========================= */
+
+.table-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background-color: #333;
+    color: white;
+    padding: 14px;
+    text-align: center;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* =========================
+   Table Links
+========================= */
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   User Details
+========================= */
+
+.details-card {
+    width: 500px;
+    max-width: 90%;
+    margin: 60px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.details-card h1 {
+    margin-top: 0;
+    color: #222;
+}
+
+.details-card h2,
+.details-card h3 {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* =========================
+   Create New User Link
+========================= */
+
+.create-link {
+    display: block;
+    width: fit-content;
+    margin: 25px auto;
+    padding: 10px 18px;
+    background-color: #333;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.create-link:hover {
+    background-color: #555;
+    text-decoration: none;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 700px) {
+
+    .container,
+    .table-container {
+        width: 95%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .form-container,
+    .details-card {
+        width: 90%;
+    }
+}
+
